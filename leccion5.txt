@@ -1,0 +1,18 @@
+CLASE 5
+
+todomvc.com
+
+backbone: 4 clases importantes que dan flexibilidad para hacer todo lo que queramos
+
+clase modelo
+
+clase colection = grupos de modelos y metodos para accesarlos
+
+clase vista = ligado a zero o mas modelos. Son Html y comportamiento. No estan relacionadas a un modelo a diferencia de Angular.js
+
+github.com/siedrix/pulse
+
+grunt libreria
+bb_generate plugin de grunt
+
+npm install -g grunt-cli

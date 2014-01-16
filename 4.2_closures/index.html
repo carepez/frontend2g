@@ -1,0 +1,36 @@
+<!--En javascrip cada funcion, al momento de ser definida, crea su proprio contexto -->
+<!-- Cuando se define una funcion, esta tiene asociadas las variables y funcionamento internos asi como todas las variables y funcionamentos que estaban definidos hasta ese momento. es decir tieneacceso a todas las variables de su proprio contexto interno asi como a todas las variables que estaban definidas al momento de su definicion en el contexto al que pertenece -->
+<!--Desde ese contexto es posible acceder al contexto global -->
+<!--En el browser el contexto global es el objeto window -->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>Hola mundo</p>
+	<script type="text/javascript">
+		//contexto global
+		var sabor = "Mermelada";
+		function crearPizza(rebanadas){
+			//nuevo contexto de crearPizza
+			var sabor = "margarita"; //override
+
+			var helper = function () {
+				// nuevo contexto de helper
+				var sabor = "peperoni"; //override
+				console.log('La mia la quiero con sabor ' + sabor + ' y ' + rebanadas + ' rebanadas.');
+			}
+
+			console.log('Hacer una pizza se trata sobre todo del sabor ' + sabor);
+
+			helper();
+		}
+
+		crearPizza(8);
+
+		console.log('He cambiado idea, mejor con ' + sabor);
+	</script>
+</body>
+</html>
